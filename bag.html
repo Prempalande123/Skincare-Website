@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <title>Auraa | Ecommerce website Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bag.css">
+    <link rel="stylesheet" href="newbag.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="header">    
+        <div class="container">
+        <div class="navbar">
+        <div class="logo">
+            
+          <a href="index.html">
+            <img class="logoimg" src="images/Aurralogo.jpg.png" width="125px" alt="Auraa Logo">
+        </a>
+            </div>
+            <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="blog.html">Blogs</a></li>
+                 <li><a href="About.html">About</a></li>
+                 <!-- <li><a href="">Contact</a></li> -->
+                 <li><a href="login.html">Account</a></li>
+                </ul>
+            </nav>
+               
+
+            <a href="bag.html">
+                <img src="images/pngwing.com.png" width="30px" height="30px">
+                <span class="bag-item-count">0</span>
+            </a>
+            
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        </div> 
+        </div>
+        <script>
+
+          var MenuItems = document.getElementById("MenuItems");
+          MenuItems.style.maxHeight = "0px";
+          function menutoggle(){
+              if(MenuItems.style.maxHeight == "0px")
+                  {
+                       MenuItems.style.maxHeight = "200px";
+                  }
+              else{
+                   MenuItems.style.maxHeight = "0px";
+              }
+          }
+           
+      </script>
+   
+    
+   
+
+
+    <main>
+      <div class="bag-page">
+        <div class="bag-items-container">
+          
+        </div>
+        <div class="bag-summary">
+          
+        </div>
+      </div>
+    </main> 
+
+    <script src="item.js"></script>
+    <script src="index.js"></script>
+    <script src="bag.js"></script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+}
+
+.menu-icon {
+  width: 28px;
+  margin-left: 20px;
+  display: none;
+}
+
+/* BAG CSS */
+.bag-page {
+  display: flex;
+  flex-direction: row; /* Change to row for side-by-side layout */
+  justify-content: space-between; /* Add space between bag items and bag summary */
+  width: 100%; /* Utilize the full width of the page */
+}
+
+.bag-items-container {
+  width: 65%; /* Adjusted width for bag items container */
+}
+
+.bag-summary {
+  width: 25%; /* Adjusted width for bag summary */
+  margin-top: 20px;
+  margin-right: 5%; /* Adjusted margin to move the bag summary more inside */
+  text-align: left; /* Align bag summary to the left on smaller screens */
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 800px) {
+  .bag-page {
+    flex-direction: column; /* Switch back to column layout for smaller screens */
+  }
+
+  .bag-items-container,
+  .bag-summary {
+    width: 100%; /* Full width for both on smaller screens */
+    margin-right: 0; /* Reset margin for smaller screens */
+  }
+}
+
+.bag-item-container {
+  flex-basis: calc(33.33% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: box-shadow 0.3s, background-color 0.3s;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.bag-item-container:hover {
+  transform: scale(1.05);
+}
+
+.bag-item-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .bag-item-container {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bag-item-container {
+    flex-basis: 100%;
+  }
+}
+
+.item-left-part {
+  position: absolute;
+  background: rgb(255, 242, 223);
+  height: 148px;
+  width: 111px;
+  border-radius: 8px 0 0 8px;
+}
+
+.item-right-part {
+  padding-left: 12px;
+  position: relative;
+  min-height: 148px;
+  margin-left: 111px;
+  margin-bottom: 12px;
+}
+
+.return-period {
+  display: inline-flex;
+  font-size: 14px;
+  padding-top: 8px;
+}
+
+.return-period-days {
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.delivery-details {
+  margin-top: 5px;
+  color: #282c3f;
+  font-size: 12px;
+  letter-spacing: -.1px;
+  margin-bottom: 8px;
+  line-height: 15px;
+}
+
+.delivery-details-days {
+  color: #03a685;
+}
+
+.remove-from-cart {
+  position: absolute;
+  font-size: 25px;
+  top: 10px;
+  right: 18px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.bag-details-container {
+  margin-bottom: 16px;
+}
+
+.price-header {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 24px 0 16px;
+  color: #535766;
+}
+
+.price-item {
+  margin-bottom: 12px;
+  line-height: 16px;
+  font-size: 14px;
+  color: #282c3f;
+}
+
+.price-item-value {
+  float: right;
+}
+
+.priceDetail-base-discount {
+  color: #03a685;
+}
+
+.price-footer {
+  font-weight: 700;
+  font-size: 15px;
+  padding-top: 16px;
+  border-top: 1px solid #eaeaec;
+  color: #3e4152;
+  line-height: 16px;
+}
+
+/* Responsive styles for order summary */
+@media only screen and (max-width: 800px) {
+  .price-item,
+  .price-header,
+  .price-item-value,
+  .priceDetail-base-discount,
+  .price-footer {
+    text-align: left;
+  }
+}
+
+.btn-place-order {
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 2px;
+  border-width: 0px;
+  padding: 10px 16px;
+  background-color: rgb(38 18 5);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.bag-item-count {
+  background-color: #272424;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 18px;
+  padding: 0 6px;
+  height: 18px;
+  position: relative;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #fff;
+  left: -6px;
+  top: -20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.company{
+  font-weight: bold;
+}
+
+.discount-percentage{
+  color: #e95a22;
+  font-size: 12px;
+}
